@@ -1,0 +1,87 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36408.4
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 - Presentation", "1 - Presentation", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 - Services", "2 - Services", "{F447186D-704F-48DF-BDFA-2FFAEDB18574}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3 - Application", "3 - Application", "{B556E4D6-FF4E-42BE-8FB1-6E4BE48CE2FF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4 - Domain", "4 - Domain", "{ACCBADC6-C4F6-45AC-AA72-00B6317C6606}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5 - Infra", "5 - Infra", "{2A477823-39AD-4F22-84C5-27093443D13E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5.1 - Data", "5.1 - Data", "{86F8A945-68D0-44F5-91AA-3A618AB74B3A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5.2 - CrossCutting", "5.2 - CrossCutting", "{BCA44A49-B00B-4185-AF2A-14BAF3830734}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExamePratico.Application", "ExamePratico.Application\ExamePratico.Application.csproj", "{213F05BD-8D5C-49FC-8054-B4961AFE5FFB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExamePratico.Domain", "ExamePratico.Domain\ExamePratico.Domain.csproj", "{78A71F51-22DF-4296-A506-8ADA698F01C3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExamePratico.Infra.Data", "ExamePratico.Infra.Data\ExamePratico.Infra.Data.csproj", "{A27E7177-92F5-4A77-AD0A-6D3FD3C72CAB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExamePratico.Infra.CrossCutting", "ExamePratico.Infra.CrossCutting\ExamePratico.Infra.CrossCutting.csproj", "{CE2FC9CD-5190-431F-9F91-E981CFA08A37}"
+EndProject
+Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "PortalSeguroDeCarro", "_Presentation\PortalSeguroDeCarro\PortalSeguroDeCarro.esproj", "{3676D5FF-A581-A4AA-B459-32B698CB5B68}"
+	ProjectSection(ProjectDependencies) = postProject
+		{F54E94D4-2359-4C38-9F5A-17C315A733E6} = {F54E94D4-2359-4C38-9F5A-17C315A733E6}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExamePratico.Services", "ExamePratico.Services\ExamePratico.Services.csproj", "{F54E94D4-2359-4C38-9F5A-17C315A733E6}"
+	ProjectSection(ProjectDependencies) = postProject
+		{213F05BD-8D5C-49FC-8054-B4961AFE5FFB} = {213F05BD-8D5C-49FC-8054-B4961AFE5FFB}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{213F05BD-8D5C-49FC-8054-B4961AFE5FFB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{213F05BD-8D5C-49FC-8054-B4961AFE5FFB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{213F05BD-8D5C-49FC-8054-B4961AFE5FFB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{213F05BD-8D5C-49FC-8054-B4961AFE5FFB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{78A71F51-22DF-4296-A506-8ADA698F01C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{78A71F51-22DF-4296-A506-8ADA698F01C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{78A71F51-22DF-4296-A506-8ADA698F01C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{78A71F51-22DF-4296-A506-8ADA698F01C3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A27E7177-92F5-4A77-AD0A-6D3FD3C72CAB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A27E7177-92F5-4A77-AD0A-6D3FD3C72CAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A27E7177-92F5-4A77-AD0A-6D3FD3C72CAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A27E7177-92F5-4A77-AD0A-6D3FD3C72CAB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CE2FC9CD-5190-431F-9F91-E981CFA08A37}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CE2FC9CD-5190-431F-9F91-E981CFA08A37}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CE2FC9CD-5190-431F-9F91-E981CFA08A37}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CE2FC9CD-5190-431F-9F91-E981CFA08A37}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3676D5FF-A581-A4AA-B459-32B698CB5B68}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3676D5FF-A581-A4AA-B459-32B698CB5B68}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3676D5FF-A581-A4AA-B459-32B698CB5B68}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{3676D5FF-A581-A4AA-B459-32B698CB5B68}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3676D5FF-A581-A4AA-B459-32B698CB5B68}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3676D5FF-A581-A4AA-B459-32B698CB5B68}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{F54E94D4-2359-4C38-9F5A-17C315A733E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F54E94D4-2359-4C38-9F5A-17C315A733E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F54E94D4-2359-4C38-9F5A-17C315A733E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F54E94D4-2359-4C38-9F5A-17C315A733E6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{86F8A945-68D0-44F5-91AA-3A618AB74B3A} = {2A477823-39AD-4F22-84C5-27093443D13E}
+		{BCA44A49-B00B-4185-AF2A-14BAF3830734} = {2A477823-39AD-4F22-84C5-27093443D13E}
+		{213F05BD-8D5C-49FC-8054-B4961AFE5FFB} = {B556E4D6-FF4E-42BE-8FB1-6E4BE48CE2FF}
+		{78A71F51-22DF-4296-A506-8ADA698F01C3} = {ACCBADC6-C4F6-45AC-AA72-00B6317C6606}
+		{A27E7177-92F5-4A77-AD0A-6D3FD3C72CAB} = {86F8A945-68D0-44F5-91AA-3A618AB74B3A}
+		{CE2FC9CD-5190-431F-9F91-E981CFA08A37} = {BCA44A49-B00B-4185-AF2A-14BAF3830734}
+		{3676D5FF-A581-A4AA-B459-32B698CB5B68} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{F54E94D4-2359-4C38-9F5A-17C315A733E6} = {F447186D-704F-48DF-BDFA-2FFAEDB18574}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {97C7BAF0-1C7A-4080-ABE5-6D4C8C79D194}
+	EndGlobalSection
+EndGlobal

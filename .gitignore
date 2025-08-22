@@ -1,0 +1,76 @@
+# ================================
+# .NET 8
+# ================================
+
+# Build Folders
+bin/
+obj/
+out/
+
+# User-specific files
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Auto-generated files
+*.dll
+*.exe
+*.pdb
+*.cache
+*.log
+*.vspscc
+*.vssscc
+*.dbmdl
+*.bak
+*.backup
+
+# NuGet packages
+*.nupkg
+# The packages folder can be ignored because of Package Restore
+**/packages/*
+
+# Rider
+.idea/
+
+# VS Code
+.vscode/
+
+# ================================
+# Angular / Node.js
+# ================================
+
+# Node modules
+node_modules/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Angular build output
+dist/
+tmp/
+out-tsc/
+
+# Compiled source
+*.js
+*.js.map
+*.tsbuildinfo
+
+# Environment files
+.env
+.env.*.local
+
+# ================================
+# Misc
+# ================================
+
+# OS generated files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Docker
+docker-compose.override.yml
