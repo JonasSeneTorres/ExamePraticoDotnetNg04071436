@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "D:\\Projetos\\dotnet\\ExamePraticoDotnetNg04071436\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{3676D5FF-A581-A4AA-B459-32B698CB5B68}|_Presentation\\PortalSeguroDeCarro\\PortalSeguroDeCarro.esproj|d:\\projetos\\dotnet\\examepraticodotnetng04071436\\_presentation\\portalsegurodecarro\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{3676D5FF-A581-A4AA-B459-32B698CB5B68}|_Presentation\\PortalSeguroDeCarro\\PortalSeguroDeCarro.esproj|solutionrelative:_presentation\\portalsegurodecarro\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{F54E94D4-2359-4C38-9F5A-17C315A733E6}|ExamePratico.Services\\ExamePratico.Services.csproj|d:\\projetos\\dotnet\\examepraticodotnetng04071436\\examepratico.services\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F54E94D4-2359-4C38-9F5A-17C315A733E6}|ExamePratico.Services\\ExamePratico.Services.csproj|solutionrelative:examepratico.services\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -38,7 +42,7 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "Seguro.cs",
               "DocumentMoniker": "D:\\Projetos\\dotnet\\ExamePraticoDotnetNg04071436\\ExamePratico.Domain\\Entities\\Seguro.cs",
               "RelativeDocumentMoniker": "ExamePratico.Domain\\Entities\\Seguro.cs",
@@ -47,12 +51,24 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-22T04:27:36.415Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": ".gitignore",
+              "DocumentMoniker": "D:\\Projetos\\dotnet\\ExamePraticoDotnetNg04071436\\_Presentation\\PortalSeguroDeCarro\\.gitignore",
+              "RelativeDocumentMoniker": "_Presentation\\PortalSeguroDeCarro\\.gitignore",
+              "ToolTip": "D:\\Projetos\\dotnet\\ExamePraticoDotnetNg04071436\\_Presentation\\PortalSeguroDeCarro\\.gitignore",
+              "RelativeToolTip": "_Presentation\\PortalSeguroDeCarro\\.gitignore",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-08-22T15:12:06.983Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\Projetos\\dotnet\\ExamePraticoDotnetNg04071436\\ExamePratico.Services\\Program.cs",
               "RelativeDocumentMoniker": "ExamePratico.Services\\Program.cs",
@@ -65,7 +81,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "WeatherForecastController.cs",
               "DocumentMoniker": "D:\\Projetos\\dotnet\\ExamePraticoDotnetNg04071436\\ExamePratico.Services\\Controllers\\WeatherForecastController.cs",
               "RelativeDocumentMoniker": "ExamePratico.Services\\Controllers\\WeatherForecastController.cs",
@@ -73,12 +89,11 @@
               "RelativeToolTip": "ExamePratico.Services\\Controllers\\WeatherForecastController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-22T04:42:20.084Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-22T04:42:20.084Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "appsettings.json",
               "DocumentMoniker": "D:\\Projetos\\dotnet\\ExamePraticoDotnetNg04071436\\ExamePratico.Services\\appsettings.json",
               "RelativeDocumentMoniker": "ExamePratico.Services\\appsettings.json",
@@ -86,12 +101,11 @@
               "RelativeToolTip": "ExamePratico.Services\\appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAA/AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-08-22T04:41:43.159Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-22T04:41:43.159Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "DomainToDtoProfile.cs",
               "DocumentMoniker": "D:\\Projetos\\dotnet\\ExamePraticoDotnetNg04071436\\ExamePratico.Application\\Mappings\\DomainToDtoProfile.cs",
               "RelativeDocumentMoniker": "ExamePratico.Application\\Mappings\\DomainToDtoProfile.cs",
@@ -99,12 +113,11 @@
               "RelativeToolTip": "ExamePratico.Application\\Mappings\\DomainToDtoProfile.cs",
               "ViewState": "AgIAAAwAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-22T04:27:55.746Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-22T04:27:55.746Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "SeguroDTO.cs",
               "DocumentMoniker": "D:\\Projetos\\dotnet\\ExamePraticoDotnetNg04071436\\ExamePratico.Application\\DTOs\\SeguroDTO.cs",
               "RelativeDocumentMoniker": "ExamePratico.Application\\DTOs\\SeguroDTO.cs",
@@ -112,8 +125,7 @@
               "RelativeToolTip": "ExamePratico.Application\\DTOs\\SeguroDTO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-22T04:28:21.183Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-22T04:28:21.183Z"
             }
           ]
         }
