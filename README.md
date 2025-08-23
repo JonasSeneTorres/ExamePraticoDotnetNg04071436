@@ -71,8 +71,8 @@ flowchart TB
     end
 
     subgraph External ["Integrações e Dados"]
-        SQL[(SQL Server)]
-        JSON[APIs Externas (JSONServer)]
+        SQL["(SQL Server)"]
+        JSON["APIs Externas (JSONServer)"]
     end
 
     UI --> Services
@@ -213,3 +213,4 @@ Jonas Sene Torres – [LinkedIn](https://www.linkedin.com/in/jonas-sene-torres/)
 
 Este projeto está sob a licença [MIT](https://opensource.org/licenses/MIT)
 .
+
