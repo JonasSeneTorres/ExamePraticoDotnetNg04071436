@@ -211,5 +211,4 @@ Jonas Sene Torres – [LinkedIn](https://www.linkedin.com/in/jonas-sene-torres/)
 
 ## 📄 Licença
 
-Este projeto está sob a licença [MIT](https://opensource.org/licenses/MIT)
-.
+Este projeto está sob a licença [MIT](https://opensource.org/licenses/MIT).
