@@ -71,8 +71,8 @@ flowchart TB
     end
 
     subgraph External ["Integrações e Dados"]
-        SQL[(SQL Server)]
-        JSON[APIs Externas (JSONServer)]
+        SQL["(SQL Server)"]
+        JSON["APIs Externas (JSONServer)"]
     end
 
     UI --> Services
