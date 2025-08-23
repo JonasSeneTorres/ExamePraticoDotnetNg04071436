@@ -1,29 +1,4 @@
-version: "3.9"
+version: '3.9'
 
-services:
-  app:
-    build: .
-    depends_on:
-      - db
-    environment:
-      # Connection string apontando para o serviço 'db' no Compose
-      - ConnectionStrings__DefaultConnection=Server=db,1433;Database=ExamePratico;User Id=sa;Password=Senha@123;TrustServerCertificate=True
-    ports:
-      - "5000:8080" # Porta exposta da sua API
-    command: sh -c "./wait-for-it.sh db:1433 -- dotnet ExamePratico.Services.dll"
-    volumes:
-      - ./wait-for-it.sh:/wait-for-it.sh
-
-  db:
-    image: mcr.microsoft.com/mssql/server:2022-latest
-    container_name: sqlserver
-    environment:
-      ACCEPT_EULA: "Y"
-      SA_PASSWORD: "Senha@123"
-    ports:
-      - "1433:1433"
-    volumes:
-      - sql_data:/var/opt/mssql
-
-volumes:
-  sql_data:
+services: {}
+  # Nenhum serviço de banco aqui. Produção usará SQL Server real.

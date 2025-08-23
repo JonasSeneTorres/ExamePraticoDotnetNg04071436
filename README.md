@@ -59,18 +59,18 @@ O projeto segue os princípios do **Domain-Driven Design (DDD)**, com separaçã
 
 ```mermaid
 flowchart TB
-    subgraph Frontend [Frontend - Angular (Presentation)]
+    subgraph Frontend ["Frontend - Angular (Presentation)"]
         UI[Interface do Usuário]
     end
 
-    subgraph Backend [Backend - .NET (DDD Layers)]
+    subgraph Backend ["Backend - .NET (DDD Layers)"]
         Services[Services]
         App[Application]
         Domain[Domain]
         Infra[Infra]
     end
 
-    subgraph External [Integrações e Dados]
+    subgraph External ["Integrações e Dados"]
         SQL[(SQL Server)]
         JSON[APIs Externas (JSONServer)]
     end
@@ -173,16 +173,26 @@ Caso esteja usando outro sistema operacional ou queira rodar manualmente, você 
    ```
 - Refazer migrations e atualizar banco
 Caso seja necessário recriar a migration e atualizar o banco de dados, execute os seguintes comandos na raiz do projeto:
+
+   1 - Remover a última migration (ou todas, se necessário)
    ```bash
-   # 1. Remover a última migration (ou todas, se necessário)
-   dotnet ef migrations remove --project ExamePratico.Infra.Data/ExamePratico.Infra.Data.csproj --startup-project ExamePratico.Services/ExamePratico.Services.csproj
-
-   # 2. Criar nova migration
-   dotnet ef migrations add InitialCreate --project ExamePratico.Infra.Data/ExamePratico.Infra.Data.csproj --startup-project ExamePratico.Services/ExamePratico.Services.csproj
-
-   # 3. Atualizar o banco de dados
-   dotnet ef database update --project ExamePratico.Infra.Data/ExamePratico.Infra.Data.csproj --startup-project ExamePratico.Services/ExamePratico.Services.csproj
-
+   dotnet ef migrations remove \
+   --project ExamePratico.Infra.Data/ExamePratico.Infra.Data.csproj \
+   --startup-project ExamePratico.Services/ExamePratico.Services.csproj
+   ```
+   
+   2 - Criar nova migration
+   ```bash
+   dotnet ef migrations add InitialCreate \
+   --startup-project ExamePratico.Services/ExamePratico.Services.csproj \
+   --project ExamePratico.Infra.Data/ExamePratico.Infra.Data.csproj
+   ```
+   
+   3 - Atualizar o banco de dados   
+   ```bash
+   dotnet ef database update \
+   --project ExamePratico.Infra.Data/ExamePratico.Infra.Data.csproj \
+   --startup-project ExamePratico.Services/ExamePratico.Services.csproj
    ```
    
 ## 📚 Roadmap

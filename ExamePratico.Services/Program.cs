@@ -1,7 +1,7 @@
-using AutoMapper;
-using ExamePratico.Application.Mappings;
 using ExamePratico.Infra.Data;
 using Microsoft.EntityFrameworkCore;
+using AutoMapper;
+using ExamePratico.Application.Mappings;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -13,6 +13,12 @@ builder.Services.AddDbContext<ExamePraticoContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"))
 );
 
+
+var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+
+builder.Services.AddDbContext<ExamePraticoContext>(options =>
+    options.UseSqlServer(connectionString));
+// Add services to the container.
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
@@ -33,18 +39,5 @@ app.UseHttpsRedirection();
 app.UseAuthorization();
 
 app.MapControllers();
-
-using (var scope = app.Services.CreateScope())
-{
-    try
-    {
-        var db = scope.ServiceProvider.GetRequiredService<ExamePraticoContext>();
-        db.Database.Migrate();
-    }
-    catch (Exception ex)
-    {
-        Console.WriteLine("Erro ao aplicar migrations: " + ex.Message);
-    }
-}
 
 app.Run();

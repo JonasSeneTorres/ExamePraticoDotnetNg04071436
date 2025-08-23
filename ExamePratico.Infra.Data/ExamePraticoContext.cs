@@ -15,6 +15,7 @@ namespace ExamePratico.Infra.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            modelBuilder.HasDefaultSchema("dbo");
             modelBuilder.ApplyConfiguration(new SeguradoConfig());
             modelBuilder.ApplyConfiguration(new VeiculoConfig());
             modelBuilder.ApplyConfiguration(new SeguroConfig());

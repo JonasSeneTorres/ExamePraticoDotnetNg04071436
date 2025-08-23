@@ -17,7 +17,8 @@ namespace ExamePratico.Infra.Data.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "9.0.8")
+                .HasDefaultSchema("dbo")
+                .HasAnnotation("ProductVersion", "8.0.0")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
@@ -51,7 +52,7 @@ namespace ExamePratico.Infra.Data.Migrations
 
                     b.HasKey("SeguradoId");
 
-                    b.ToTable("Segurados");
+                    b.ToTable("Segurados", "dbo");
                 });
 
             modelBuilder.Entity("ExamePratico.Domain.Entities.Seguro", b =>
@@ -88,7 +89,7 @@ namespace ExamePratico.Infra.Data.Migrations
 
                     b.HasIndex("VeiculoId");
 
-                    b.ToTable("Seguros");
+                    b.ToTable("Seguros", "dbo");
                 });
 
             modelBuilder.Entity("ExamePratico.Domain.Entities.Veiculo", b =>
@@ -121,7 +122,7 @@ namespace ExamePratico.Infra.Data.Migrations
 
                     b.HasKey("VeiculoId");
 
-                    b.ToTable("Veiculos");
+                    b.ToTable("Veiculos", "dbo");
                 });
 
             modelBuilder.Entity("ExamePratico.Domain.Entities.Seguro", b =>
