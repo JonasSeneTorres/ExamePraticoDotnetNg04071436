@@ -1,0 +1,25 @@
+@media (max-width: 1199px) {
+  .painel{
+    width: 100vw;
+
+    &__{
+      &interno {
+        padding: 0 1rem;
+        overflow: scroll;
+      }
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .painel{
+    width: 100vw;
+
+    &__{
+      &interno {
+        margin: auto;
+        width: 1250px;
+      }
+    }
+  }
+}

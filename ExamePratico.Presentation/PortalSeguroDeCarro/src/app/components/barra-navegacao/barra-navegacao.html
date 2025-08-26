@@ -1,0 +1,29 @@
+<nav class="barra">
+  <ul>
+    <li class="barra__item">
+      <a
+        class="barra__link"
+        [routerLink]="['']"
+        routerLinkActive="barra__link--active"
+        [routerLinkActiveOptions]="{ exact: true }"
+      >
+        <span class="fa-solid fa-angle-right"></span> Home
+      </a>
+    </li>
+    <li class="barra__item">
+      <a class="barra__link" [routerLink]="['/segurado']" routerLinkActive="barra__link--active">
+        <span class="fa-solid fa-angle-right"></span> Segurados
+      </a>
+    </li>
+    <li class="barra__item">
+      <a class="barra__link" [routerLink]="['/seguro']" routerLinkActive="barra__link--active">
+        <span class="fa-solid fa-angle-right"></span> Seguros
+      </a>
+    </li>
+    <li class="barra__item">
+      <a class="barra__link" [routerLink]="['/veiculo']" routerLinkActive="barra__link--active">
+        <span class="fa-solid fa-angle-right"></span> Veiculos
+      </a>
+    </li>
+  </ul>
+</nav>

@@ -1,0 +1,40 @@
+.barra {
+  border: solid 1px #666;
+  border-radius: 8px;
+  height: calc(100% - 4rem);
+  margin: 1rem 1rem 1rem 0;
+  min-height: calc(100vh - 11rem - 14px);
+  padding: 1rem;
+
+  &__ {
+    &item {
+      height: 100%;
+      margin-top: 0.5rem;
+      padding: 0.5rem 0;
+      width: 100%;
+
+      &:not:first-child {
+        margin-bottom: 1rem;
+      }
+    }
+
+    &link {
+      color: #666;
+      transition: transform 0.3s ease-in-out;
+      text-decoration: none;
+
+      .fa-solid {
+        display: none;
+      }
+
+      &--active {
+        font-weight: 500;
+        font-size: 1.5rem;
+
+        .fa-solid {
+          display: inline;
+        }
+      }
+    }
+  }
+}

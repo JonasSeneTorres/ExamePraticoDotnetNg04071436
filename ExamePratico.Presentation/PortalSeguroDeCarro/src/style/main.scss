@@ -1,0 +1,10 @@
+@use './abstract/reset.scss';
+@use './vendors/ngprime.scss';
+
+* {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+.center {
+  text-align: center;
+}

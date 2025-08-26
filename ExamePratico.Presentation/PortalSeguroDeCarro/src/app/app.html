@@ -1,0 +1,18 @@
+<div class="app">
+  <app-header class="app__header">
+    <a class="app__titulo" [routerLink]="['/']">
+      <span class="fa fa-car" aria-hidden="true"></span>
+      Seguro de Carros
+    </a>
+  </app-header>
+
+  <app-painel-central class="app__container">
+    <div class="app__container-interno">
+      <app-barra-navegacao />
+      <main class="app__main">
+        <router-outlet></router-outlet>
+      </main>
+    </div>
+  </app-painel-central>
+  <app-footer class="app__footer" />
+</div>
