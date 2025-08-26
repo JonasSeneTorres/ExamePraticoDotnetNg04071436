@@ -71,7 +71,6 @@ flowchart TB
 
     subgraph External ["Integrações e Dados"]
         SQL["(SQL Server)"]
-        JSON["APIs Externas (JSONServer)"]
     end
 
     UI --> Services
@@ -79,10 +78,11 @@ flowchart TB
     App --> Domain
     Domain --> Infra
     Infra --> SQL
-    Infra --> JSON
+    
 ```
 ---
-
+<!--JSON["APIs Externas (JSONServer)"]-->
+<!-- Infra --> JSON -->
 ## ⚙️ Configuração e Execução Inicial
 
 O projeto inclui um arquivo **`Setup.bat`** na raiz que automatiza todo o processo inicial no Windows.  
@@ -209,5 +209,6 @@ Caso seja necessário recriar a migration e atualizar o banco de dados, execute 
 Jonas Sene Torres – [LinkedIn](https://www.linkedin.com/in/jonas-sene-torres/) | [GitHub](https://github.com/JonasSeneTorres)
 
 ## 📄 Licença
+
 
 Este projeto está sob a licença [MIT](https://opensource.org/licenses/MIT).
