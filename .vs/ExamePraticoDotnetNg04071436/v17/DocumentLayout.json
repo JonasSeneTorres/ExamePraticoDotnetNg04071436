@@ -72,7 +72,7 @@
               "RelativeDocumentMoniker": "ExamePratico.Domain\\Entities\\Veiculo.cs",
               "ToolTip": "D:\\Projetos\\dotnet\\ExamePraticoDotnetNg04071436\\ExamePratico.Domain\\Entities\\Veiculo.cs",
               "RelativeToolTip": "ExamePratico.Domain\\Entities\\Veiculo.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAXAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-25T15:01:29.05Z",
               "EditorCaption": ""
@@ -87,8 +87,7 @@
               "RelativeToolTip": "ExamePratico.Domain\\Entities\\Segurado.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAAAAABYAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-25T14:59:21.771Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-25T14:59:21.771Z"
             },
             {
               "$type": "Document",
@@ -100,8 +99,7 @@
               "RelativeToolTip": "ExamePratico.Application\\DTOs\\SeguroDTO.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAAA8AAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-25T14:58:19.445Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-25T14:58:19.445Z"
             },
             {
               "$type": "Document",
@@ -113,8 +111,7 @@
               "RelativeToolTip": "ExamePratico.Application\\Mappings\\DomainToDtoProfile.cs",
               "ViewState": "AgIAAAkAAAAAAAAAAAAAACIAAABjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-25T15:00:38.547Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-25T15:00:38.547Z"
             },
             {
               "$type": "Document",
@@ -126,8 +123,7 @@
               "RelativeToolTip": "ExamePratico.Application\\DTOs\\VeiculoDTO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-25T14:58:24.855Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-25T14:58:24.855Z"
             },
             {
               "$type": "Document",
@@ -139,8 +135,7 @@
               "RelativeToolTip": "ExamePratico.Infra.Data\\Repositories\\VeiculoRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-25T15:00:18.173Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-25T15:00:18.173Z"
             },
             {
               "$type": "Document",
@@ -152,8 +147,7 @@
               "RelativeToolTip": "ExamePratico.Services\\Controllers\\VeiculoController.cs",
               "ViewState": "AgIAAE0AAAAAAAAAAAAAAGAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-25T16:59:35.731Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-25T16:59:35.731Z"
             },
             {
               "$type": "Document",
@@ -165,8 +159,7 @@
               "RelativeToolTip": "ExamePratico.Services\\Controllers\\SeguradoController.cs",
               "ViewState": "AgIAAEwAAAAAAAAAAAAuwGEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-25T16:59:18.804Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-25T16:59:18.804Z"
             },
             {
               "$type": "Document",
@@ -178,8 +171,7 @@
               "RelativeToolTip": "ExamePratico.Application\\DTOs\\SeguradoDTO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-25T14:58:13.358Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-25T14:58:13.358Z"
             },
             {
               "$type": "Document",
@@ -191,8 +183,7 @@
               "RelativeToolTip": "ExamePratico.Infra.Data\\EntitiesConfig\\SeguroConfig.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-25T15:01:54.824Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-25T15:01:54.824Z"
             },
             {
               "$type": "Document",
@@ -204,8 +195,7 @@
               "RelativeToolTip": "ExamePratico.Domain\\Entities\\Seguro.cs",
               "ViewState": "AgIAABsAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-25T15:02:10.803Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-25T15:02:10.803Z"
             },
             {
               "$type": "Document",
@@ -217,8 +207,7 @@
               "RelativeToolTip": "ExamePratico.Infra.Data\\Repositories\\SeguroRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-25T15:00:16.406Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-25T15:00:16.406Z"
             },
             {
               "$type": "Document",
@@ -230,8 +219,7 @@
               "RelativeToolTip": "ExamePratico.Services\\appsettings.Development.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-08-23T11:53:58.726Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-23T11:53:58.726Z"
             }
           ]
         }

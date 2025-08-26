@@ -6,6 +6,9 @@
 bin/
 obj/
 out/
+*.dll
+*.exe
+*.log
 
 # User-specific files
 *.rsuser
@@ -35,7 +38,10 @@ out/
 .idea/
 
 # VS Code
-.vscode/
+.vs/
+*.vscode/
+*.user
+*.suo
 
 # ================================
 # Angular / Node.js
@@ -43,8 +49,11 @@ out/
 
 # Node modules
 node_modules/
+dist/
+.angular/
 
 # Logs
+*.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*

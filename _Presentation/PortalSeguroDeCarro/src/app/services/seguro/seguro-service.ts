@@ -28,8 +28,8 @@ export class SeguroService {
     return this.http.get<any>(`${this.apiUrl}/${id}`);
   }
 
-  update(id: number, user: any): Observable<any> {
-    return this.http.put<any>(`${this.apiUrl}/${id}`, user);
+  update(seguro: any): Observable<any> {
+    return this.http.put<any>(`${this.apiUrl}/${seguro.seguroId}`, seguro);
   }
 
   delete(id: number): Observable<void> {

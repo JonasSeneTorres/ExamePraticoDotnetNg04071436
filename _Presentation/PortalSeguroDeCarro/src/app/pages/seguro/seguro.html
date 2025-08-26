@@ -16,11 +16,11 @@
           <td>Valor Seguro</td>
           <td>Segurado</td>
           <td>Idade</td>
-          <td></td>
+          <td style="width: 58px;"></td>
         </tr>
       </thead>
       <tbody>
-        @for (item of lista; track item.Id) {
+        @for (item of lista; track item.seguradoId) {
           <tr>
             <td>{{ item.seguroId }}</td>
             <td>{{ item.veiculoMarca }}</td>
@@ -30,10 +30,10 @@
             <td>{{ item.seguradoNome }}</td>
             <td>{{ item.seguradoIdade }}</td>
             <td class="center">
-              <button class="seguro__botao_editar" [routerLink]="['/routePath']">
+              <button class="seguro__botao_editar" [routerLink]="['editar', item?.seguradoId]">
                 <span class="fa fa-pencil" aria-hidden="true"></span>
               </button>
-              <button class="seguro__botao_cancelar" [routerLink]="['/routePath']">
+              <button class="seguro__botao_cancelar" (click)="openDialog(item)">
                 <span class="fa fa-times" aria-hidden="true"></span>
               </button>
             </td>

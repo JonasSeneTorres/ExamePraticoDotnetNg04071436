@@ -1,7 +1,7 @@
 import { ActivatedRoute, Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup, ReactiveFormsModule, Validators, } from '@angular/forms';
+import { FormControl, FormGroup, ReactiveFormsModule, Validators, } from '@angular/forms';
 
 import { SeguradoService } from './../../../services/segurado/segurado-service';
 
