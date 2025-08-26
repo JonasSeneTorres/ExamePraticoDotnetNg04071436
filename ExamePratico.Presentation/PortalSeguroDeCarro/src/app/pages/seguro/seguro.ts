@@ -5,17 +5,15 @@ import { RouterModule } from '@angular/router';
 
 import { ConfirmDialogComponent } from '../../components/confirm-dialog/confirm-dialog';
 import { SeguroService } from '../../services/seguro/seguro-service';
-import { Spinner } from '../../components/spinner/spinner';
 
 @Component({
   selector: 'app-seguro',
-  imports: [CommonModule, RouterModule, Spinner],
+  imports: [CommonModule, RouterModule],
   templateUrl: './seguro.html',
   styleUrl: './seguro.scss',
 })
 export class Seguro implements OnInit {
   lista: any[] = [];
-  processando = true;
 
   constructor(private seguroService: SeguroService, private dialog: MatDialog) {}
 
@@ -34,21 +32,23 @@ export class Seguro implements OnInit {
 
     dialogRef.afterClosed().subscribe((result) => {
       if (result) {
+        console.log(segurado.seguradoId);
         this.seguroService.delete(segurado.seguradoId).subscribe({
           next: () => {
             this.carregarLista();
           },
         });
+      } else {
+        console.log('Usuário cancelou ❌');
       }
     });
   }
 
   private carregarLista() {
-    this.processando = true;
     this.seguroService.getAll().subscribe({
       next: (sucesso) => {
         this.lista = sucesso;
-        this.processando = false;
+        console.log(sucesso);
       },
       error: (e) => {
         console.error(e);
