@@ -73,14 +73,14 @@ namespace ExamePratico.Infra.Data.Migrations
                         principalSchema: "dbo",
                         principalTable: "Segurados",
                         principalColumn: "SeguradoId",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
                         name: "FK_Seguros_Veiculos_VeiculoId",
                         column: x => x.VeiculoId,
                         principalSchema: "dbo",
                         principalTable: "Veiculos",
                         principalColumn: "VeiculoId",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateIndex(

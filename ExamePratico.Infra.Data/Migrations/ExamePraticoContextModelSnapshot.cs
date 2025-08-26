@@ -18,7 +18,7 @@ namespace ExamePratico.Infra.Data.Migrations
 #pragma warning disable 612, 618
             modelBuilder
                 .HasDefaultSchema("dbo")
-                .HasAnnotation("ProductVersion", "8.0.0")
+                .HasAnnotation("ProductVersion", "8.0.8")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
@@ -130,13 +130,13 @@ namespace ExamePratico.Infra.Data.Migrations
                     b.HasOne("ExamePratico.Domain.Entities.Segurado", "Segurado")
                         .WithMany()
                         .HasForeignKey("SeguradoId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.HasOne("ExamePratico.Domain.Entities.Veiculo", "Veiculo")
                         .WithMany()
                         .HasForeignKey("VeiculoId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.Navigation("Segurado");

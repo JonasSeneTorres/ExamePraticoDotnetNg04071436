@@ -19,6 +19,12 @@ namespace ExamePratico.Infra.Data
             modelBuilder.ApplyConfiguration(new SeguradoConfig());
             modelBuilder.ApplyConfiguration(new VeiculoConfig());
             modelBuilder.ApplyConfiguration(new SeguroConfig());
+
+            foreach (var relationship in modelBuilder.Model.GetEntityTypes()
+                     .SelectMany(e => e.GetForeignKeys()))
+            {
+                relationship.DeleteBehavior = DeleteBehavior.Restrict;
+            }
         }
     }
 }
