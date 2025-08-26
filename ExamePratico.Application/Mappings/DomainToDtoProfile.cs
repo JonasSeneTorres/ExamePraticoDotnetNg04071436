@@ -19,15 +19,21 @@ namespace ExamePratico.Application.Mappings
 
             // Seguro
             CreateMap<Seguro, SeguroDTO>()
-                //.ForMember(dest => dest.NomeSegurado, opt => opt.MapFrom(src => src.Segurado.Nome))
-                //.ForMember(dest => dest.PlacaVeiculo, opt => opt.MapFrom(src => src.Veiculo.Placa))
-                // Mapeia propriedades calculadas
-                .ForMember(dest => dest.ValorDoVeiculo, opt => opt.MapFrom(src => src.ValorDoVeiculo))
+                .ForMember(dest => dest.SeguroId, opt => opt.MapFrom(src => src.SeguroId))
+                .ForMember(dest => dest.VeiculoId, opt => opt.MapFrom(src => src.Veiculo.VeiculoId))
+                .ForMember(dest => dest.VeiculoMarca, opt => opt.MapFrom(src => src.Veiculo.Marca))
+                .ForMember(dest => dest.VeiculoModelo, opt => opt.MapFrom(src => src.Veiculo.Modelo))
                 .ForMember(dest => dest.TaxaDeRisco, opt => opt.MapFrom(src => src.TaxaDeRisco))
                 .ForMember(dest => dest.PremioDoRisco, opt => opt.MapFrom(src => src.PremioDoRisco))
                 .ForMember(dest => dest.PremioPuro, opt => opt.MapFrom(src => src.PremioPuro))
                 .ForMember(dest => dest.PremioComercial, opt => opt.MapFrom(src => src.PremioComercial))
-                .ForMember(dest => dest.ValorDoSeguro, opt => opt.MapFrom(src => src.ValorDoSeguro));
+                .ForMember(dest => dest.ValorDoSeguro, opt => opt.MapFrom(src => src.ValorDoSeguro))
+                .ForMember(dest => dest.SeguradoId, opt => opt.MapFrom(src => src.Segurado.SeguradoId))
+                .ForMember(dest => dest.SeguradoNome, opt => opt.MapFrom(src => src.Segurado.Nome))
+                .ForMember(dest => dest.SeguradoCPF, opt => opt.MapFrom(src => src.Segurado.CPF))
+                .ForMember(dest => dest.SeguradoDataNascimento, opt => opt.MapFrom(src => src.Segurado.DataNascimento))
+                .ForMember(dest => dest.SeguradoIdade, opt => opt.MapFrom(src => src.Segurado.Idade))
+                ;
 
             CreateMap<SeguroDTO, Seguro>();
         }

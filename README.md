@@ -20,7 +20,7 @@ Funcionalidades principais (até o momento):
 
 ## 📖 Documentação Oficial
 O documento completo com as especificações do projeto pode ser encontrado em:  
-[`Documentação/Exame_Desenvolvedor_DotNet.pdf`](./ExamePraticoDotnetNg04071436/Documentação/Exame_Desenvolvedor_DotNet.pdf)  
+[`_Documentação/Exame_Desenvolvedor_DotNet.pdf`](./_Documentação/Exame_Desenvolvedor_DotNet.pdf)  
 
 ---
 
@@ -35,7 +35,7 @@ O documento completo com as especificações do projeto pode ser encontrado em:
 ### Frontend
 - **Angular 20**  
 - **SASS** (pré-processador de estilos)  
-- **Karma + Jasmine** (testes unitários)  
+<!-- - **Karma + Jasmine** (testes unitários)   -->
 
 ---
 
@@ -52,9 +52,8 @@ O projeto segue os princípios do **Domain-Driven Design (DDD)**, com separaçã
   - **Infra** → Implementações de persistência, repositórios e integrações externas.  
 - **Acessos a Dados**  
   - **SQL Server** → Persistência dos dados do sistema.  
-  - **APIs Externas (mockadas via JSONServer)** → Simulação de integrações externas.  
-
----
+ ---
+ <!--    - **APIs Externas (mockadas via JSONServer)** → Simulação de integrações externas.   -->
 ### 🔹 Diagrama de Arquitetura
 
 ```mermaid
@@ -131,12 +130,12 @@ Caso esteja usando outro sistema operacional ou queira rodar manualmente, você 
 ---
 ### 🔹 Acessando a Aplicação
 
-- Backend (API): https://localhost:5001/swagger
+- Backend (API): https://localhost:7215/swagger
 
-- Frontend (Angular): http://localhost:4200/
+- Frontend (Angular): http://localhost:54300/
 
 ---
-### 🔹  Testes
+<!-- ### 🔹  Testes
 
 - Backend (.NET):
    ```bash
@@ -149,7 +148,7 @@ Caso esteja usando outro sistema operacional ou queira rodar manualmente, você 
    ng test
    ```
    
----
+--- -->
 ## 📌 Possíveis Erros e Soluções
 
 - Erro de conexão com SQL Server
@@ -194,7 +193,7 @@ Caso seja necessário recriar a migration e atualizar o banco de dados, execute 
    --project ExamePratico.Infra.Data/ExamePratico.Infra.Data.csproj \
    --startup-project ExamePratico.Services/ExamePratico.Services.csproj
    ```
-   
+<!--    
 ## 📚 Roadmap
 
  - Autenticação e autorização
@@ -203,7 +202,7 @@ Caso seja necessário recriar a migration e atualizar o banco de dados, execute 
 
  - Deploy via Docker Compose
 
- - Frontend completo para consumo da API
+ - Frontend completo para consumo da API -->
 
 ## 👨‍💻 Autor
 

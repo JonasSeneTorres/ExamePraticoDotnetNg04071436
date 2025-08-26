@@ -1,0 +1,10 @@
+.painel{
+  width: 100vw;
+
+  &__{
+    &interno {
+      margin: auto;
+      width: 1250px;
+    }
+  }
+}

@@ -1,0 +1,47 @@
+.app {
+  display: grid;
+  grid-template-areas:
+    "header"
+    "container"
+    "footer";
+
+  &__ {
+    &container {
+      grid-area: container;
+      min-height: calc(100vh - 4rem - 3rem - 27px);
+
+      &-interno {
+        display: grid;
+        // grid-row: 200px 1fr;
+        grid-template-columns: 200px 1fr;
+
+      }
+    }
+
+    &footer {
+       grid-area: footer;
+    }
+
+    &header {
+      grid-area: header;
+    }
+
+    &main {
+      border: solid 1px #666;
+      border-radius: 8px;
+      margin: 1rem 0;
+      min-height: calc(100vh - 11rem - 14px);
+      padding: 1rem;
+    }
+
+    &titulo {
+      color: #fff;
+          font-size: 1.5rem;
+    text-decoration: none;
+    }
+  }
+}
+
+.fa-car {
+  margin-right: 1rem;
+}

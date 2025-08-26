@@ -1,0 +1,41 @@
+<section class="segurado">
+
+  <div class="segurado__container-botao">
+    <h1 class="segurado__titulo"><span class="fa-solid fa-person"></span> Segurados</h1>
+    <a class="segurado__link" [routerLink]="['/segurado/novo']">Novo</a>
+  </div>
+
+  <div class="segurado__ctabela">
+    <table class="segurado__tabela">
+      <thead>
+        <tr>
+          <td>Id</td>
+          <td>Nome</td>
+          <td>CPF</td>
+          <td>Data de Nascimento</td>
+          <td>Idade</td>
+          <td></td>
+        </tr>
+      </thead>
+      <tbody>
+        @for (item of lista; track item.Id) {
+          <tr>
+            <td>{{ item?.seguradoId }}</td>
+            <td>{{ item?.nome }}</td>
+            <td>{{ item?.cpf | cpf }}</td>
+            <td>{{ item?.dataNascimento | date: 'dd/MM/yyyy' }}</td>
+            <td>{{ item?.idade }}</td>
+            <td class="center">
+              <button class="segurado__botao_editar" [routerLink]="['editar', item?.seguradoId]">
+                <span class="fa fa-pencil" aria-hidden="true"></span>
+              </button>
+              <button class="segurado__botao_cancelar" [routerLink]="['/routePath', item?.seguradoId]">
+                <span class="fa fa-times" aria-hidden="true"></span>
+              </button>
+            </td>
+          </tr>
+        }
+      </tbody>
+    </table>
+  </div>
+</section>

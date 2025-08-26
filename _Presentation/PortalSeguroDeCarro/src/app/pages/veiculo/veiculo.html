@@ -1,0 +1,39 @@
+<section class="veiculo">
+
+  <div class="veiculo__container-botao">
+    <h1 class="veiculo__titulo"><span class="fa-solid fa-car-side"></span> Veículos</h1>
+    <a class="veiculo__link" [routerLink]="['/veiculo/novo']">Novo</a>
+  </div>
+
+  <div class="veiculo__ctabela">
+    <table class="veiculo__tabela">
+      <thead>
+        <tr>
+          <td>Id</td>
+          <td>Marca</td>
+          <td>Modelo</td>
+          <td>Valor veiculo</td>
+          <td></td>
+        </tr>
+      </thead>
+      <tbody>
+        @for (item of lista; track item.Id) {
+          <tr>
+            <td>{{ item?.veiculoId }}</td>
+            <td>{{ item?.marca }}</td>
+            <td>{{ item?.modelo }}</td>
+            <td>{{ item?.valorDoVeiculo | currency:'BRL' }}</td>
+            <td class="center">
+              <button class="veiculo__botao_editar" [routerLink]="['/routePath']">
+                <span class="fa fa-pencil" aria-hidden="true"></span>
+              </button>
+              <button class="veiculo__botao_cancelar" [routerLink]="['/routePath']">
+                <span class="fa fa-times" aria-hidden="true"></span>
+              </button>
+            </td>
+          </tr>
+        }
+      </tbody>
+    </table>
+  </div>
+</section>
