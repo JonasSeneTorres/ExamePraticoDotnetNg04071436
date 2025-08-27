@@ -3,7 +3,7 @@
     <h1 class="segurado__titulo"><span class="fa-solid fa-person"></span> {{ acao }} Segurado</h1>
   </div>
 
-  <form [formGroup]="form" (ngSubmit)="onSubmit()">
+  <form [formGroup]="form" autocomplete="off" (ngSubmit)="onSubmit()">
     <fieldset>
       @if (acao === 'Editar') {
         <div>
@@ -45,7 +45,7 @@
         </div>
     </fieldset>
     <div>
-      <button class="segurado__botao_cancelar" type="button">Cancelar</button>
+      <button class="segurado__botao_cancelar" type="button" [routerLink]="['/segurado']">Cancelar</button>
       <button class="segurado__botao_editar" type="submit">Enviar</button>
     </div>
   </form>

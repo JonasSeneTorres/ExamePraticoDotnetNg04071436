@@ -5,13 +5,6 @@ import { Erro } from './pages/erro/erro';
 import { Home } from './pages/home/home';
 import { PaginaNaoEncontrada } from './pages/pagina-nao-encontrada/pagina-nao-encontrada';
 
-export function apiMatcher(segments: UrlSegment[]) {
-  if (segments.length > 0 && segments[0].path === 'api') {
-    return { consumed: segments }; // ignora rota /api/** (vai para proxy/backend)
-  }
-  return null;
-}
-
 const routes: Routes = [
   { path: '', component: Home },
   { path: 'erro', component: Erro },
@@ -31,11 +24,6 @@ const routes: Routes = [
     loadChildren: () =>
       import('../app/pages/veiculo/veiculo.routes').then((x) => x.MenuRoutes),
   },
-
-  // 👇 esta rota precisa estar ANTES do coringa
-  { matcher: apiMatcher, redirectTo: '' },
-
-  // rota coringa (404)
   { path: '**', component: PaginaNaoEncontrada },
 ];
 

@@ -3,6 +3,8 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
+#pragma warning disable CA1814 // Prefer jagged arrays over multidimensional
+
 namespace ExamePratico.Infra.Data.Migrations
 {
     /// <inheritdoc />
@@ -22,7 +24,7 @@ namespace ExamePratico.Infra.Data.Migrations
                     SeguradoId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Nome = table.Column<string>(type: "nvarchar(200)", maxLength: 200, nullable: false),
-                    CPF = table.Column<string>(type: "nvarchar(11)", maxLength: 11, nullable: false),
+                    CPF = table.Column<string>(type: "nvarchar(14)", maxLength: 14, nullable: false),
                     DataNascimento = table.Column<DateTime>(type: "datetime2", nullable: false),
                     DataCadastro = table.Column<DateTime>(type: "datetime2", nullable: false),
                     DataUltimaAlteracao = table.Column<DateTime>(type: "datetime2", nullable: true)
@@ -81,6 +83,27 @@ namespace ExamePratico.Infra.Data.Migrations
                         principalTable: "Veiculos",
                         principalColumn: "VeiculoId",
                         onDelete: ReferentialAction.Restrict);
+                });
+
+            migrationBuilder.InsertData(
+                schema: "dbo",
+                table: "Segurados",
+                columns: new[] { "SeguradoId", "CPF", "DataCadastro", "DataNascimento", "DataUltimaAlteracao", "Nome" },
+                values: new object[,]
+                {
+                    { 1, "123.456.789-00", new DateTime(2025, 8, 27, 4, 55, 41, 490, DateTimeKind.Local).AddTicks(1834), new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null, "João Silva" },
+                    { 2, "987.654.321-00", new DateTime(2025, 8, 27, 4, 55, 41, 490, DateTimeKind.Local).AddTicks(1839), new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null, "Maria Oliveira" }
+                });
+
+            migrationBuilder.InsertData(
+                schema: "dbo",
+                table: "Veiculos",
+                columns: new[] { "VeiculoId", "DataCadastro", "DataUltimaAlteracao", "Marca", "Modelo", "ValorDoVeiculo" },
+                values: new object[,]
+                {
+                    { 1, new DateTime(2025, 8, 27, 4, 55, 41, 490, DateTimeKind.Local).AddTicks(1578), null, "Toyota", "Corolla", 80000m },
+                    { 2, new DateTime(2025, 8, 27, 4, 55, 41, 490, DateTimeKind.Local).AddTicks(1616), null, "Honda", "Civic", 85000m },
+                    { 3, new DateTime(2025, 8, 27, 4, 55, 41, 490, DateTimeKind.Local).AddTicks(1619), null, "Ford", "Focus", 75000m }
                 });
 
             migrationBuilder.CreateIndex(

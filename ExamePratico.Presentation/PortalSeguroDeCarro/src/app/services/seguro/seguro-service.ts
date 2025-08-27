@@ -36,4 +36,12 @@ export class SeguroService {
   delete(id: number): Observable<void> {
     return this.http.delete<void>(`${this.apiUrl}/${id}`);
   }
+
+  getMedia(): Observable<any[]> {
+    return this.http.get<any[]>(`${this.apiUrl}/media-por-marca`);
+  }
+
+  getRelatorio(): Observable<any[]> {
+    return this.http.get<any[]>(`${this.apiUrl}/relatorio`);
+  }
 }

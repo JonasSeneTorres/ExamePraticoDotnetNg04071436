@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { RouterModule } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 
 import { ConfirmDialogComponent } from '../../components/confirm-dialog/confirm-dialog';
 import { Spinner } from '../../components/spinner/spinner';
@@ -17,21 +17,11 @@ export class Veiculo {
   lista: any[] = [];
   processando = true;
 
-  // constructor(private veiculoService: VeiculoService) {}
-
-  // ngOnInit(): void {
-  //   this.veiculoService.getAll().subscribe({
-  //     next: (sucesso) => {
-  //       this.lista = sucesso;
-  //     },
-  //     error: (e) => {
-  //       console.error(e);
-  //     },
-  //   });
-  // }
-
-  
-  constructor(private veiculoService: VeiculoService, private dialog: MatDialog) {}
+  constructor(
+    private veiculoService: VeiculoService,
+    private dialog: MatDialog,
+    private router: Router
+  ) {}
 
   ngOnInit(): void {
     this.carregarLista();
@@ -65,7 +55,7 @@ export class Veiculo {
         this.processando = false;
       },
       error: (e) => {
-        console.error(e);
+        this.router.navigate(['/erro']);
       },
     });
   }

@@ -1,21 +1,27 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { RouterModule } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 
 import { ConfirmDialogComponent } from '../../components/confirm-dialog/confirm-dialog';
 import { SeguroService } from '../../services/seguro/seguro-service';
+import { Spinner } from '../../components/spinner/spinner';
 
 @Component({
   selector: 'app-seguro',
-  imports: [CommonModule, RouterModule],
+  imports: [CommonModule, RouterModule, Spinner],
   templateUrl: './seguro.html',
   styleUrl: './seguro.scss',
 })
 export class Seguro implements OnInit {
   lista: any[] = [];
+  processando = true;
 
-  constructor(private seguroService: SeguroService, private dialog: MatDialog) {}
+  constructor(
+    private seguroService: SeguroService,
+    private dialog: MatDialog,
+    private router: Router
+  ) {}
 
   ngOnInit(): void {
     this.carregarLista();
@@ -32,14 +38,11 @@ export class Seguro implements OnInit {
 
     dialogRef.afterClosed().subscribe((result) => {
       if (result) {
-        console.log(segurado.seguradoId);
         this.seguroService.delete(segurado.seguradoId).subscribe({
           next: () => {
             this.carregarLista();
           },
         });
-      } else {
-        console.log('Usuário cancelou ❌');
       }
     });
   }
@@ -48,10 +51,10 @@ export class Seguro implements OnInit {
     this.seguroService.getAll().subscribe({
       next: (sucesso) => {
         this.lista = sucesso;
-        console.log(sucesso);
+        this.processando = false;
       },
       error: (e) => {
-        console.error(e);
+        this.router.navigate(['/erro']);
       },
     });
   }

@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { RouterModule } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 
 import { ConfirmDialogComponent } from '../../components/confirm-dialog/confirm-dialog';
 import { CpfPipe } from '../../pipes/cpf-pipe';
@@ -18,7 +18,11 @@ export class Segurado {
   lista: any[] = [];
   processando = true;
 
-  constructor(private seguradoService: SeguradoService, private dialog: MatDialog) {}
+  constructor(
+    private seguradoService: SeguradoService,
+    private dialog: MatDialog,
+    private router: Router
+  ) {}
 
   ngOnInit(): void {
     this.carregarLista();
@@ -52,7 +56,7 @@ export class Segurado {
         this.processando = false;
       },
       error: (e) => {
-        console.error(e);
+        this.router.navigate(['/erro']);
       },
     });
   }

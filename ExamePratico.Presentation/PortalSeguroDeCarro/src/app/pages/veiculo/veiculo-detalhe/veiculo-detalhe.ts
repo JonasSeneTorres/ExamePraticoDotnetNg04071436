@@ -1,20 +1,23 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormGroup, FormControl, Validators, ReactiveFormsModule } from '@angular/forms';
-import { Router, ActivatedRoute } from '@angular/router';
+import { Router, ActivatedRoute, RouterModule } from '@angular/router';
 
-import { CurrencyMaskDirective } from '../../../directives/currency-mask.directive';
-import { formatNumberToCurrency } from '../../../utilitaries/parseNumberToCurrent';
-import { parseCurrencyToNumber } from '../../../utilitaries/parseCurrentyToNumber';
+import { formatNumberToCurrency } from '../../../utilitaries-function/parseNumberToCurrent';
+import { MaskDinheiroBrDirective } from '../../../directives/mask-dinheiro/mask-dinheiro-br.directive';
+import { parseCurrencyToNumber } from '../../../utilitaries-function/parseCurrentyToNumber';
 import { VeiculoService } from '../../../services/veiculo/veiculo-service';
 
 @Component({
   selector: 'app-veiculo-detalhe',
-  imports: [CommonModule, ReactiveFormsModule, CurrencyMaskDirective],
+  imports: [CommonModule, RouterModule, ReactiveFormsModule, MaskDinheiroBrDirective],
   templateUrl: './veiculo-detalhe.html',
-  styleUrl: './veiculo-detalhe.scss'
+  styleUrl: './veiculo-detalhe.scss',
 })
 export class VeiculoDetalhe {
+  id: string | null = null;
+  acao?: string;
+
   form: FormGroup = new FormGroup({
     veiculoId: new FormControl(''),
     valorDoVeiculo: new FormControl(''),
@@ -23,13 +26,11 @@ export class VeiculoDetalhe {
     dataCadastro: new FormControl(''),
     dataUltimaAlteracao: new FormControl(''),
   });
-  id: string | null = null;
-  acao?: string;
 
   constructor(
     private router: Router,
     private activatedRoute: ActivatedRoute,
-    private veiculoService: VeiculoService,
+    private veiculoService: VeiculoService
   ) {}
 
   ngOnInit(): void {
@@ -95,15 +96,15 @@ export class VeiculoDetalhe {
 
   private editar() {
     let veiculo = this.form.value;
-    console.log(parseCurrencyToNumber(veiculo.valorDoVeiculo))
     veiculo.valorDoVeiculo = parseCurrencyToNumber(veiculo.valorDoVeiculo);
 
     this.veiculoService.update(veiculo).subscribe({
       next: () => {
-        this.router.navigate(['/segurado']);
+        this.router.navigate(['/veiculo']);
       },
-      error: () => {},
+      error: () => {
+        this.router.navigate(['/erro']);
+      },
     });
   }
 }
-

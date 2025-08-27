@@ -21,13 +21,13 @@ namespace ExamePratico.Infra.Data.Repositories
             return _db.Set<TEntity>().Find(id);
         }
 
-        public void Add(TEntity entity)
+        virtual public void Add(TEntity entity)
         {
             _db.Add(entity);
             _db.SaveChanges();
         }
 
-        public void Update(TEntity entity)
+        virtual public void Update(TEntity entity)
         {
             _db.Entry(entity).State = Microsoft.EntityFrameworkCore.EntityState.Modified;
             _db.SaveChanges();

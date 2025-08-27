@@ -29,6 +29,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExamePratico.Services", "Ex
 EndProject
 Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "PortalSeguroDeCarro", "ExamePratico.Presentation\PortalSeguroDeCarro\PortalSeguroDeCarro.esproj", "{42D9ADFB-EBAB-7DAF-9FE9-D9C572B12EDD}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "6 - Testes", "6 - Testes", "{B65C8AED-AECD-47D4-A5CD-1A06FE571BCA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExamePratico.Tests", "ExamePratico.Tests\ExamePratico.Tests.csproj", "{F6C09451-843D-4C3D-BB02-4400A35CB2A2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -61,6 +65,10 @@ Global
 		{42D9ADFB-EBAB-7DAF-9FE9-D9C572B12EDD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{42D9ADFB-EBAB-7DAF-9FE9-D9C572B12EDD}.Release|Any CPU.Build.0 = Release|Any CPU
 		{42D9ADFB-EBAB-7DAF-9FE9-D9C572B12EDD}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{F6C09451-843D-4C3D-BB02-4400A35CB2A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F6C09451-843D-4C3D-BB02-4400A35CB2A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F6C09451-843D-4C3D-BB02-4400A35CB2A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F6C09451-843D-4C3D-BB02-4400A35CB2A2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -74,6 +82,7 @@ Global
 		{CE2FC9CD-5190-431F-9F91-E981CFA08A37} = {BCA44A49-B00B-4185-AF2A-14BAF3830734}
 		{C28CD43B-9F40-49AB-A827-6EAB17C3C144} = {F447186D-704F-48DF-BDFA-2FFAEDB18574}
 		{42D9ADFB-EBAB-7DAF-9FE9-D9C572B12EDD} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{F6C09451-843D-4C3D-BB02-4400A35CB2A2} = {B65C8AED-AECD-47D4-A5CD-1A06FE571BCA}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {97C7BAF0-1C7A-4080-ABE5-6D4C8C79D194}

@@ -2,17 +2,17 @@ import { Directive, HostListener, ElementRef, forwardRef } from '@angular/core';
 import { NG_VALUE_ACCESSOR, ControlValueAccessor } from '@angular/forms';
 
 @Directive({
-  selector: '[appCurrencyMask]',
+  selector: '[appMaskDinheiroBr]',
   standalone: true,
   providers: [
     {
       provide: NG_VALUE_ACCESSOR,
-      useExisting: forwardRef(() => CurrencyMaskDirective),
+      useExisting: forwardRef(() => MaskDinheiroBrDirective),
       multi: true
     }
   ]
 })
-export class CurrencyMaskDirective implements ControlValueAccessor {
+export class MaskDinheiroBrDirective implements ControlValueAccessor {
   private el: HTMLInputElement;
 
   private onChange: (value: string) => void = () => {};
@@ -22,7 +22,7 @@ export class CurrencyMaskDirective implements ControlValueAccessor {
     this.el = this.elementRef.nativeElement;
   }
 
-  @HostListener('input', ['$event'])
+  @HostListener('input')
   onInput() {
     let value = this.el.value;
 

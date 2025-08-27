@@ -33,8 +33,8 @@ namespace ExamePratico.Infra.Data.Migrations
 
                     b.Property<string>("CPF")
                         .IsRequired()
-                        .HasMaxLength(11)
-                        .HasColumnType("nvarchar(11)");
+                        .HasMaxLength(14)
+                        .HasColumnType("nvarchar(14)");
 
                     b.Property<DateTime>("DataCadastro")
                         .HasColumnType("datetime2");
@@ -53,6 +53,24 @@ namespace ExamePratico.Infra.Data.Migrations
                     b.HasKey("SeguradoId");
 
                     b.ToTable("Segurados", "dbo");
+
+                    b.HasData(
+                        new
+                        {
+                            SeguradoId = 1,
+                            CPF = "123.456.789-00",
+                            DataCadastro = new DateTime(2025, 8, 27, 4, 55, 41, 490, DateTimeKind.Local).AddTicks(1834),
+                            DataNascimento = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Nome = "João Silva"
+                        },
+                        new
+                        {
+                            SeguradoId = 2,
+                            CPF = "987.654.321-00",
+                            DataCadastro = new DateTime(2025, 8, 27, 4, 55, 41, 490, DateTimeKind.Local).AddTicks(1839),
+                            DataNascimento = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Nome = "Maria Oliveira"
+                        });
                 });
 
             modelBuilder.Entity("ExamePratico.Domain.Entities.Seguro", b =>
@@ -123,6 +141,32 @@ namespace ExamePratico.Infra.Data.Migrations
                     b.HasKey("VeiculoId");
 
                     b.ToTable("Veiculos", "dbo");
+
+                    b.HasData(
+                        new
+                        {
+                            VeiculoId = 1,
+                            DataCadastro = new DateTime(2025, 8, 27, 4, 55, 41, 490, DateTimeKind.Local).AddTicks(1578),
+                            Marca = "Toyota",
+                            Modelo = "Corolla",
+                            ValorDoVeiculo = 80000m
+                        },
+                        new
+                        {
+                            VeiculoId = 2,
+                            DataCadastro = new DateTime(2025, 8, 27, 4, 55, 41, 490, DateTimeKind.Local).AddTicks(1616),
+                            Marca = "Honda",
+                            Modelo = "Civic",
+                            ValorDoVeiculo = 85000m
+                        },
+                        new
+                        {
+                            VeiculoId = 3,
+                            DataCadastro = new DateTime(2025, 8, 27, 4, 55, 41, 490, DateTimeKind.Local).AddTicks(1619),
+                            Marca = "Ford",
+                            Modelo = "Focus",
+                            ValorDoVeiculo = 75000m
+                        });
                 });
 
             modelBuilder.Entity("ExamePratico.Domain.Entities.Seguro", b =>

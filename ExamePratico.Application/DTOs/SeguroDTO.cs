@@ -2,12 +2,13 @@
 {
     public class SeguroDTO
     {
-
         public int SeguroId { get; set; }
         public int VeiculoId { get; set; }
         public string VeiculoMarca { get; set; } = string.Empty;
         public string VeiculoModelo { get; set; } = string.Empty;
         public decimal ValorDoVeiculo { get; set; }
+        public decimal Lucro { get; set; }
+        public decimal MargemSeguranca { get; set; }
         public decimal TaxaDeRisco { get; set; }
         public decimal PremioDoRisco { get; set; }
         public decimal PremioPuro { get; set; }

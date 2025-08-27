@@ -3,7 +3,7 @@
     <h1 class="veiculo__titulo"><span class="fa-solid fa-car-side"></span> {{ acao }} Veículo</h1>
   </div>
 
-  <form [formGroup]="form" (ngSubmit)="onSubmit()">
+  <form [formGroup]="form" autocomplete="off" (ngSubmit)="onSubmit()">
     <fieldset>
       @if (acao === 'Editar') {
       <div>
@@ -24,7 +24,7 @@
         <input type="text"
              id="valor"
              placeholder="R$ 0,00"
-             appCurrencyMask
+             appMaskDinheiroBr
              formControlName="valorDoVeiculo" />
         <!-- <input
           type="text"
@@ -49,11 +49,8 @@
       </div>
     </fieldset>
     <div>
-      <button class="veiculo__botao_cancelar" type="button">Cancelar</button>
+      <button class="veiculo__botao_cancelar" type="button" [routerLink]="['/veiculo']" routerLinkActive="router-link-active" >Cancelar</button>
       <button class="veiculo__botao_editar" type="submit">Enviar</button>
     </div>
   </form>
-  <pre>
-    {{ form.value | json }}
-  </pre>
 </section>

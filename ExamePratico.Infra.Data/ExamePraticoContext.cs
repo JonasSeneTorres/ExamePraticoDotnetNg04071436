@@ -25,6 +25,54 @@ namespace ExamePratico.Infra.Data
             {
                 relationship.DeleteBehavior = DeleteBehavior.Restrict;
             }
+
+            modelBuilder
+                .Entity<Veiculo>()
+                .HasData(
+                    new Veiculo
+                    {
+                        VeiculoId = 1,
+                        Marca = "Toyota",
+                        Modelo = "Corolla",
+                        ValorDoVeiculo = 80000,
+                        DataCadastro = DateTime.Now
+                    },
+                    new Veiculo
+                    {
+                        VeiculoId = 2,
+                        Marca = "Honda",
+                        Modelo = "Civic",
+                        ValorDoVeiculo = 85000,
+                        DataCadastro = DateTime.Now
+                    },
+                    new Veiculo
+                    {
+                        VeiculoId = 3,
+                        Marca = "Ford",
+                        Modelo = "Focus",
+                        ValorDoVeiculo = 75000,
+                        DataCadastro = DateTime.Now
+                    }
+                );
+
+            modelBuilder
+                .Entity<Segurado>()
+                .HasData(
+                    new Segurado
+                    {
+                        SeguradoId = 1,
+                        Nome = "João Silva",
+                        CPF = "123.456.789-00",
+                        DataCadastro = DateTime.Now
+                    },
+                    new Segurado
+                    {
+                        SeguradoId = 2,
+                        Nome = "Maria Oliveira",
+                        CPF = "987.654.321-00",
+                        DataCadastro = DateTime.Now
+                    }
+                );
         }
     }
 }

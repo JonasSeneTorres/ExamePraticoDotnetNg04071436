@@ -15,7 +15,7 @@ namespace ExamePratico.Infra.Data.EntitiesConfig
                 .IsRequired();
 
             builder.Property(s => s.CPF)
-                .HasMaxLength(11)
+                .HasMaxLength(14)
                 .IsRequired();
 
             builder.Property(s => s.DataNascimento)

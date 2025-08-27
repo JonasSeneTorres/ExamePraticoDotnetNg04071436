@@ -100,5 +100,138 @@ namespace ExamePratico.Services.Controllers
 
             return NoContent();
         }
+
+        // 🔹 GET: api/seguro/relatorio/5
+        [HttpGet("relatorio/{id}")]
+        public async Task<ActionResult<object>> GetRelatorio(int id)
+        {
+            var seguro = await _context.Seguros
+                .Include(s => s.Segurado)
+                .Include(s => s.Veiculo)
+                .FirstOrDefaultAsync(s => s.SeguroId == id);
+
+            if (seguro == null)
+                return NotFound();
+
+            var relatorio = new
+            {
+                seguro.SeguroId,
+                seguro.DataCadastro,
+                seguro.DataUltimaAlteracao,
+
+                // 🔹 Dados calculados
+                seguro.ValorDoVeiculo,
+                seguro.TaxaDeRisco,
+                seguro.PremioDoRisco,
+                seguro.PremioPuro,
+                seguro.PremioComercial,
+                seguro.ValorDoSeguro,
+
+                // 🔹 Dados relacionados
+                Segurado = new
+                {
+                    seguro.Segurado?.SeguradoId,
+                    seguro.Segurado?.Nome,
+                    seguro.Segurado?.CPF
+                },
+                Veiculo = new
+                {
+                    seguro.Veiculo?.VeiculoId,
+                    seguro.Veiculo?.Marca,
+                    seguro.Veiculo?.Modelo,
+                    seguro.Veiculo?.ValorDoVeiculo
+                }
+            };
+
+            return Ok(relatorio);
+        }
+
+        // 🔹 GET: api/seguro/relatorio
+        [HttpGet("relatorio")]
+        public async Task<ActionResult<IEnumerable<object>>> GetRelatorios()
+        {
+            var seguros = await _context.Seguros
+                .Include(s => s.Segurado)
+                .Include(s => s.Veiculo)
+                .ToListAsync();
+
+            if (seguros == null || seguros.Count == 0)
+                return NotFound("Nenhum seguro encontrado.");
+
+            var relatorios = seguros.Select(seguro => new
+            {
+                seguro.SeguroId,
+                seguro.DataCadastro,
+                seguro.DataUltimaAlteracao,
+
+                // 🔹 Dados calculados
+                seguro.ValorDoVeiculo,
+                seguro.TaxaDeRisco,
+                seguro.PremioDoRisco,
+                seguro.PremioPuro,
+                seguro.PremioComercial,
+                seguro.ValorDoSeguro,
+
+                // 🔹 Dados relacionados
+                Segurado = new
+                {
+                    seguro.Segurado?.SeguradoId,
+                    seguro.Segurado?.Nome,
+                    seguro.Segurado?.CPF
+                },
+                Veiculo = new
+                {
+                    seguro.Veiculo?.VeiculoId,
+                    seguro.Veiculo?.Marca,
+                    seguro.Veiculo?.Modelo,
+                    seguro.Veiculo?.ValorDoVeiculo
+                }
+            });
+
+            return Ok(relatorios);
+        }
+
+        // 🔹 GET: api/seguro/calcular?valor=10000&lucro=2&margem=0.1
+        [HttpGet("calcular")]
+        public ActionResult<object> CalcularSeguro([FromQuery] decimal valor, [FromQuery] decimal lucro, [FromQuery] decimal margem)
+        {
+            // Cria objeto de seguro em memória
+            var seguro = Seguro.Calcular(valorDoVeiculo: valor, lucro: lucro, margemSeguranca: margem);
+
+            // Retorna dados calculados
+            var resultado = new
+            {
+                seguro.ValorDoVeiculo,
+                seguro.TaxaDeRisco,
+                seguro.PremioDoRisco,
+                seguro.PremioPuro,
+                seguro.ValorDoSeguro
+            };
+
+            return Ok(resultado);
+        }
+
+        [HttpGet("media-por-marca")]
+        public async Task<ActionResult<IEnumerable<object>>> MediaPorMarca()
+        {
+            var seguros = await _context.Seguros
+                .Include(s => s.Veiculo)
+                .Where(s => s.Veiculo != null)
+                .ToListAsync();
+
+            if (seguros.Count == 0)
+                return NotFound("Nenhum seguro encontrado.");
+
+            var medias = seguros
+                .GroupBy(s => s.Veiculo!.Marca)
+                .Select(g => new
+                {
+                    Marca = g.Key,
+                    MediaValorDoSeguro = g.Average(s => s.ValorDoSeguro)
+                })
+                .ToList();
+
+            return Ok(medias);
+        }
     }
 }

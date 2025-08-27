@@ -1,1 +1,36 @@
-<p>home works!</p>
+<section class="home">
+  <div class="home__container-botao">
+    <h1 class="home__titulo"><span class="fa-solid fa-chart-gantt"></span> Médias por Marcas</h1>
+    <button type="button" class="home__link" (click)="baixarRelatorioJson()">
+      Extrair relatório
+    </button>
+  </div>
+
+  <div class="home__ctabela">
+    @if (processando) {
+    <app-spinner />
+    } @else {
+    <table class="home__tabela">
+      <thead>
+        <tr>
+          <td style="width: 58px">Marca</td>
+          <td>Média de preço de seguro (Em Reais)</td>
+          <!-- <td style="width: 58px;"></td> -->
+        </tr>
+      </thead>
+      <tbody>
+        @if (lista.length === 0) {
+        <tr>
+          <td class="center" colspan="6">Não há nenhum registro no momento</td>
+        </tr>
+        } @else { @for (item of lista; track item.marca) {
+        <tr>
+          <td>{{ item?.marca }}</td>
+          <td>{{ item?.mediaValorDoSeguro }}</td>
+        </tr>
+        } }
+      </tbody>
+    </table>
+    }
+  </div>
+</section>

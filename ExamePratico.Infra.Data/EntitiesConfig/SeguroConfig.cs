@@ -19,17 +19,6 @@ namespace ExamePratico.Infra.Data.EntitiesConfig
             builder.Property(s => s.DataCadastro)
                 .IsRequired();
 
-            // Relacionamentos
-            builder.HasOne(s => s.Segurado)
-                   .WithMany()
-                   .HasForeignKey("SeguradoId")
-                   .OnDelete(DeleteBehavior.Cascade);
-
-            builder.HasOne(s => s.Veiculo)
-                   .WithMany()
-                   .HasForeignKey("VeiculoId")
-                   .OnDelete(DeleteBehavior.Cascade);
-
             // Ignorar propriedades calculadas
             builder.Ignore(s => s.ValorDoVeiculo);
             builder.Ignore(s => s.TaxaDeRisco);

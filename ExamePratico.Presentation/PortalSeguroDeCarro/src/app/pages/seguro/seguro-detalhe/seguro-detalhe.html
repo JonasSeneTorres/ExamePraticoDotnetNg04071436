@@ -1,52 +1,88 @@
 <section class="seguro">
   <div class="seguro__container">
-    <h1 class="seguro__titulo"><span class="fa fa-file-text" aria-hidden="true"></span> {{ acao }} Seguro</h1>
+    <h1 class="seguro__titulo">
+      <span class="fa fa-file-text" aria-hidden="true"></span> {{ acao }} Seguro
+    </h1>
   </div>
 
-  <form [formGroup]="form" (ngSubmit)="onSubmit()">
+  <form [formGroup]="form" autocomplete="off" (ngSubmit)="onSubmit()">
     <fieldset>
       @if (acao === 'Editar') {
-        <div>
-          <label for="veiculoId">Id</label>
-          <input type="number" id="veiculoId" formControlName="veiculoId" readonly>
-        </div>
+      <div>
+        <label for="seguroId">Id</label>
+        <input type="number" id="seguroId" formControlName="seguroId" readonly />
+      </div>
       }
       <div>
-        <label for="nome">Nome</label>
-        <input type="text" id="nome" formControlName="nome">
+        <label for="seguradoId">SeguradoId</label>
+        <select id="seguradoId" formControlName="seguradoId">
+          <option>--- Selecione ---</option>
+          @for (item of listaSegurados; track item.seguradoId) {
+          <option value="item.seguradoId" [ngValue]="item.seguradoId">
+            {{ item.cpf }} | {{ item.nome }}
+          </option>
+          }
+        </select>
       </div>
       <div>
-        <label for="cpf">CPF</label>
-        <input type="text" id="cpf" formControlName="cpf">
+        <label for="veiculoId">Id</label>
+        <!-- <input type="number" id="veiculoId" formControlName="veiculoId" /> -->
+        <select id="veiculoId" formControlName="veiculoId">
+          <option>--- Selecione ---</option>
+          @for (item of listaVeiculos; track item.veiculoId) {
+          <option value="item.veiculoId" [ngValue]="item.veiculoId">
+            {{ item.marca }} | {{ item.modelo }}
+          </option>
+          }
+        </select>
       </div>
       <div class="box_duplo">
         <div>
-          <label for="dataNascimento">Data de Nascimento</label>
-          <input type="date" id="dataNascimento" formControlName="dataNascimento" [min]="minDate" [max]="maxDate">
+          <label for="lucro">Lucro (%)</label>
+          <input
+            type="text"
+            id="lucro"
+            formControlName="lucro"
+            placeholder="0,00"
+            appMaskNumericaBr
+          />
         </div>
         <div>
-          <label for="idade">Idade</label>
-          <input type="number" id="idade" formControlName="idade" readonly>
+          <label for="margemSeguranca">Margem de Segurança (%)</label>
+          <input
+            type="text"
+            id="margemSeguranca"
+            formControlName="margemSeguranca"
+            placeholder="0,00"
+            appMaskNumericaBr
+          />
         </div>
       </div>
+      @if (acao === "Editar") {
       <div class="box_duplo">
-          @if (form.value.dataCadastro.length > 0) {
-            <div>
-              <label for="dataNascimento">Data Criação</label>
-              <input type="date" id="dataNascimento" formControlName="dataCadastro" readonly>
-            </div>
-          }
-          @if(form.value.dataUltimaAlteracao.length > 0) {
-            <div>
-              <label for="dataNascimento">Data Ultima Alteração</label>
-              <input type="date" id="dataNascimento" formControlName="dataUltimaAlteracao" readonly>
-            </div>
-          }
+        @if (form.value.dataCadastro) {
+        <div>
+          <label for="dataNascimento">Data Criação</label>
+          <input type="date" id="dataNascimento" formControlName="dataCadastro" readonly />
         </div>
+        } @if(form.value.dataUltimaAlteracao) {
+        <div>
+          <label for="dataNascimento">Data Ultima Alteração</label>
+          <input type="date" id="dataNascimento" formControlName="dataUltimaAlteracao" readonly />
+        </div>
+        }
+      </div>
+      }
     </fieldset>
     <div>
-      <button class="seguro__botao_cancelar" type="button">Cancelar</button>
+      <button class="seguro__botao_cancelar" type="button" [routerLink]="['/seguro']">
+        Cancelar
+      </button>
       <button class="seguro__botao_editar" type="submit">Enviar</button>
     </div>
   </form>
 </section>
+<pre>
+    {{ form.value | json }}
+  </pre
+>

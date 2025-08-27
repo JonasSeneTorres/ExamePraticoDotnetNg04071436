@@ -58,6 +58,16 @@ input {
   }
 }
 
+select {
+  margin-bottom: 1rem;
+  width: 440px;
+  height: 3rem;
+  padding: 0.5rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: solid 1px #999;
+}
+
 .box_duplo {
   display: grid;
   grid-template-columns: 240px 240px;

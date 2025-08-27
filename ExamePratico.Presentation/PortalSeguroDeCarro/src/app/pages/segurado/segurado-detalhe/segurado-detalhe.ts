@@ -1,4 +1,4 @@
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute, Router, RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators, } from '@angular/forms';
@@ -7,11 +7,16 @@ import { SeguradoService } from './../../../services/segurado/segurado-service';
 
 @Component({
   selector: 'app-segurado-detalhe',
-  imports: [CommonModule, ReactiveFormsModule],
+  imports: [CommonModule, ReactiveFormsModule, RouterModule],
   templateUrl: './segurado-detalhe.html',
   styleUrl: './segurado-detalhe.scss',
 })
 export class SeguradoDetalhe implements OnInit {
+  id: string | null = null;
+  acao?: string;
+  readonly minDate: string = new Date('1900-01-01').toISOString().split('T')[0];
+  readonly maxDate: string = new Date().toISOString().split('T')[0];
+
   form: FormGroup = new FormGroup({
     seguradoId: new FormControl(''),
     nome: new FormControl('', [Validators.required, Validators.maxLength(200)]),
@@ -21,10 +26,6 @@ export class SeguradoDetalhe implements OnInit {
     dataCadastro: new FormControl(''),
     dataUltimaAlteracao: new FormControl(''),
   });
-  id: string | null = null;
-  acao?: string;
-  readonly minDate: string = new Date('1900-01-01').toISOString().split('T')[0];
-  readonly maxDate: string = new Date().toISOString().split('T')[0];
 
   constructor(
     private router: Router,

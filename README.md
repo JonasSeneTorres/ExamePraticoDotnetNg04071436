@@ -20,7 +20,7 @@ Funcionalidades principais (até o momento):
 
 ## 📖 Documentação Oficial
 O documento completo com as especificações do projeto pode ser encontrado em:  
-[`_Documentação/Exame_Desenvolvedor_DotNet.pdf`](./_Documentação/Exame_Desenvolvedor_DotNet.pdf)  
+[`Documentação/Exame_Desenvolvedor_DotNet.pdf`](./Documentação/Exame_Desenvolvedor_DotNet.pdf)  
 
 ---
 
@@ -30,12 +30,13 @@ O documento completo com as especificações do projeto pode ser encontrado em:
 - **Entity Framework Core** (Code First)  
 - **SQL Server 2019+**  
 - **Swagger / Swashbuckle** (documentação da API)  
-- **Docker** (planejado para containerização)  
+- **Docker** (planejado para containerização)
+- **XUnit** (testes unitários)  
 
 ### Frontend
 - **Angular 20**  
 - **SASS** (pré-processador de estilos)  
-<!-- - **Karma + Jasmine** (testes unitários)   -->
+- **Karma + Jasmine** (testes unitários)
 
 ---
 
@@ -193,16 +194,6 @@ Caso seja necessário recriar a migration e atualizar o banco de dados, execute 
    --project ExamePratico.Infra.Data/ExamePratico.Infra.Data.csproj \
    --startup-project ExamePratico.Services/ExamePratico.Services.csproj
    ```
-<!--    
-## 📚 Roadmap
-
- - Autenticação e autorização
-
- - Versionamento da API
-
- - Deploy via Docker Compose
-
- - Frontend completo para consumo da API -->
 
 ## 👨‍💻 Autor
 

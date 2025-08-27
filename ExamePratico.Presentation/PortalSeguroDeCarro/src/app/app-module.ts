@@ -7,7 +7,6 @@ import localePt from '@angular/common/locales/pt';
 import { App } from './app';
 import { AppRoutingModule } from './app-routing-module';
 import { BarraNavegacao } from './components/barra-navegacao/barra-navegacao';
-import { CurrencyMaskDirective } from './directives/currency-mask.directive';
 import { Footer } from './components/footer/footer';
 import { Header } from './components/header/header';
 import { PainelCentral } from './components/painel-central/painel-central';
@@ -19,7 +18,6 @@ registerLocaleData(localePt, 'pt');
   imports: [
     BrowserModule,
     AppRoutingModule,
-    // BrowserAnimationsModule,
     BarraNavegacao,
     Footer,
     Header,
@@ -27,7 +25,6 @@ registerLocaleData(localePt, 'pt');
   ],
   providers: [
     provideHttpClient(),
-    // provideAnimationsAsync(),
     provideBrowserGlobalErrorListeners(),
     {
       provide: LOCALE_ID,
