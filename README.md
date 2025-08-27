@@ -84,7 +84,7 @@ flowchart TB
 ```
 ---
 <!--JSON["APIs Externas (JSONServer)"]-->
-<!-- Infra --> JSON -->
+<!-- Infra  JSON -->
 ## ⚙️ Configuração e Execução Inicial
 
 O projeto inclui um arquivo **`Setup.bat`** na raiz que automatiza todo o processo inicial no Windows.  
@@ -204,4 +204,5 @@ Jonas Sene Torres – [LinkedIn](https://www.linkedin.com/in/jonas-sene-torres/)
 
 
 Este projeto está sob a licença [MIT](https://opensource.org/licenses/MIT).
+
 
