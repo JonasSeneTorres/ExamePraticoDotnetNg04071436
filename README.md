@@ -12,9 +12,10 @@ O objetivo principal é implementar um **sistema de controle de Seguros**, segui
 O backend está organizado nas camadas: **Services, Application, Domain, Infra**, enquanto o frontend é implementado na camada **Presentation (Angular)**.  
 
 Funcionalidades principais (até o momento):
-- Cadastro de Seguros  
-- Consulta de Seguros  
-- Atualização e exclusão de registros  
+- Consulta, Adição, Alteração e remoção de Seguros  
+- Consulta, Adição, Alteração e remoção de Segurados  
+- Consulta, Adição, Alteração e remoção de Veículos
+- Extração de relatório no formato JSON  
 
 ---
 
@@ -203,3 +204,4 @@ Jonas Sene Torres – [LinkedIn](https://www.linkedin.com/in/jonas-sene-torres/)
 
 
 Este projeto está sob a licença [MIT](https://opensource.org/licenses/MIT).
+
