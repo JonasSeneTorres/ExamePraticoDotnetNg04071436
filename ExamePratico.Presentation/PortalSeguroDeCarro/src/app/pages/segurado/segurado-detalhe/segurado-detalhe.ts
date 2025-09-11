@@ -111,7 +111,9 @@ export class SeguradoDetalhe implements OnInit {
       next: () => {
         this.router.navigate(['/segurado']);
       },
-      error: () => {},
+      error: () => {
+        this.router.navigate(['/erro']);
+      },
     });
   }
 
@@ -122,7 +124,9 @@ export class SeguradoDetalhe implements OnInit {
       next: () => {
         this.router.navigate(['/segurado']);
       },
-      error: () => {},
+      error: () => {
+        this.router.navigate(['/erro']);
+      },
     });
   }
 }

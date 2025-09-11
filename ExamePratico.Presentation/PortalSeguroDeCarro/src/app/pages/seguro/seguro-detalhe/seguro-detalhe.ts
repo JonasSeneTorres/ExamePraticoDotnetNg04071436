@@ -4,7 +4,7 @@ import { forkJoin, Observable } from 'rxjs';
 import { FormGroup, FormControl, Validators, ReactiveFormsModule } from '@angular/forms';
 import { Router, ActivatedRoute, ParamMap, RouterModule } from '@angular/router';
 
-import { NumericFormatDirective } from '../../../directives/mask-numerica-br/mask-numerica-br.directive';
+import { MaskNumericaBrDirective } from '../../../directives/mask-numerica-br/mask-numerica-br.directive';
 import { SeguradoService } from '../../../services/segurado/segurado-service';
 import { SeguroService } from '../../../services/seguro/seguro-service';
 import { Veiculo } from './../../veiculo/veiculo';
@@ -12,7 +12,7 @@ import { VeiculoService } from './../../../services/veiculo/veiculo-service';
 
 @Component({
   selector: 'app-seguro-detalhe',
-  imports: [CommonModule, ReactiveFormsModule, RouterModule, NumericFormatDirective],
+  imports: [CommonModule, ReactiveFormsModule, RouterModule, MaskNumericaBrDirective],
   templateUrl: './seguro-detalhe.html',
   styleUrl: './seguro-detalhe.scss',
 })
@@ -135,29 +135,3 @@ export class SeguroDetalhe {
     });
   }
 }
-
-// {
-//   "seguroId": 1,
-//   "seguradoId": 1,
-//   "veiculoId": 2,
-//   "segurado": {
-//     "seguradoId": 1,
-//     "nome": "Sharon Stone",
-//     "cpf": "11122233344",
-//     "dataNascimento": "1988-08-06T00:00:00",
-//     "dataCadastro": "2025-01-01T00:00:00",
-//     "dataUltimaAlteracao": null
-//   },
-//   "veiculo": {
-//     "veiculoId": 2,
-//     "valorDoVeiculo": 1230.01,
-//     "marca": "vw",
-//     "modelo": "modelo 1",
-//     "dataCadastro": "2025-01-01T00:00:00",
-//     "dataUltimaAlteracao": null
-//   },
-//   "lucro": "",
-//   "margemSeguranca": "",
-//   "dataCadastro": "2025-01-01T00:00:00",
-//   "dataUltimaAlteracao": null
-// }

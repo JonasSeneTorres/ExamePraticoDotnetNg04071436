@@ -1,16 +1,34 @@
+import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
 import { TestBed } from '@angular/core/testing';
 
 import { SeguradoService } from './segurado-service';
 
-describe('SeguradoService', () => {
+interface Veiculo {
+  veiculoId: number;
+  nome: string;
+  dataCadastro?: string;
+  dataUltimaAlteracao?: string | null;
+}
+
+describe('CrudService abstrato com VeiculoService', () => {
   let service: SeguradoService;
+  let httpMock: HttpTestingController;
 
   beforeEach(() => {
-    TestBed.configureTestingModule({});
+    TestBed.configureTestingModule({
+      imports: [HttpClientTestingModule],
+      providers: [SeguradoService],
+    });
+
     service = TestBed.inject(SeguradoService);
+    httpMock = TestBed.inject(HttpTestingController);
   });
 
-  it('should be created', () => {
+  afterEach(() => {
+    httpMock.verify();
+  });
+
+  it('deve criar o serviço', () => {
     expect(service).toBeTruthy();
   });
 });

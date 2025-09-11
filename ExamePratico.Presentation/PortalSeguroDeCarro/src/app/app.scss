@@ -1,9 +1,9 @@
 .app {
   display: grid;
   grid-template-areas:
-    'header'
-    'container'
-    'footer';
+    "header"
+    "container"
+    "footer";
 
   &__ {
     &container {
@@ -54,6 +54,8 @@
 .fa-car {
   margin-right: 1rem;
 }
+
+
 
 @media (max-width: 1199px) {
   app-barra-navegacao {

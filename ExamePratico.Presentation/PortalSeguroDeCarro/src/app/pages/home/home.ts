@@ -19,7 +19,7 @@ export class Home {
   processando = true;
 
   constructor(
-    private seguradoService: SeguroService,
+    private seguroService: SeguroService,
     private dialog: MatDialog,
     private router: Router
   ) {}
@@ -39,7 +39,7 @@ export class Home {
 
     dialogRef.afterClosed().subscribe((result) => {
       if (result) {
-        this.seguradoService.delete(segurado.seguradoId).subscribe({
+        this.seguroService.delete(segurado.seguradoId).subscribe({
           next: () => {
             this.carregarLista();
           },
@@ -53,7 +53,7 @@ export class Home {
   }
 
   baixarRelatorioJson() {
-    this.seguradoService.getRelatorio().subscribe({
+    this.seguroService.getRelatorio().subscribe({
       next: (sucesso) => {
         this.downloadJson(sucesso, 'relatorio.json');
       },
@@ -74,7 +74,7 @@ export class Home {
   private carregarLista() {
     this.processando = true;
 
-    this.seguradoService.getMedia().subscribe({
+    this.seguroService.getMedia().subscribe({
       next: (sucesso) => {
         this.lista = sucesso;
         this.lista.forEach((item) => {
@@ -84,7 +84,14 @@ export class Home {
         this.processando = false;
       },
       error: (e) => {
-        // this.router.navigate(['/erro']);
+        // console.log(e.error)
+        this.processando = false;
+        if (e.error === 'Nenhum seguro encontrado.') {
+          this.lista = [];
+          return;
+        }
+
+        this.router.navigate(['/erro']);
       },
     });
   }

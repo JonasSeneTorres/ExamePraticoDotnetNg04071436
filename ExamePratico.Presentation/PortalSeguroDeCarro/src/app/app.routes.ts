@@ -12,17 +12,17 @@ const routes: Routes = [
   {
     path: 'segurado',
     loadChildren: () =>
-      import('../app/pages/segurado/segurado.routes').then((x) => x.MenuRoutes),
+      import('./pages/segurado/segurado.routes').then((x) => x.MenuRoutes),
   },
   {
     path: 'seguro',
     loadChildren: () =>
-      import('../app/pages/seguro/seguro.routes').then((x) => x.MenuRoutes),
+      import('./pages/seguro/seguro.routes').then((x) => x.MenuRoutes),
   },
   {
     path: 'veiculo',
     loadChildren: () =>
-      import('../app/pages/veiculo/veiculo.routes').then((x) => x.MenuRoutes),
+      import('./pages/veiculo/veiculo.routes').then((x) => x.MenuRoutes),
   },
   { path: '**', component: PaginaNaoEncontrada },
 ];

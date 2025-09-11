@@ -4,7 +4,7 @@ import { NgControl } from '@angular/forms';
 @Directive({
   selector: '[appMaskNumericaBr]',
 })
-export class NumericFormatDirective {
+export class MaskNumericaBrDirective {
   @Input() decimals = 2; // padrão: 2 casas decimais
 
   private get input(): HTMLInputElement {

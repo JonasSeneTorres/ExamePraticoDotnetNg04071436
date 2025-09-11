@@ -4,7 +4,7 @@ import { FormGroup, FormControl, Validators, ReactiveFormsModule } from '@angula
 import { Router, ActivatedRoute, RouterModule } from '@angular/router';
 
 import { formatNumberToCurrency } from '../../../utilitaries-function/parseNumberToCurrent';
-import { MaskDinheiroBrDirective } from '../../../directives/mask-dinheiro/mask-dinheiro-br.directive';
+import { MaskDinheiroBrDirective } from '../../../directives/mask-dinheiro-br/mask-dinheiro-br.directive';
 import { parseCurrencyToNumber } from '../../../utilitaries-function/parseCurrentyToNumber';
 import { VeiculoService } from '../../../services/veiculo/veiculo-service';
 

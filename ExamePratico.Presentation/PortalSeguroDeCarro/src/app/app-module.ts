@@ -5,7 +5,7 @@ import { registerLocaleData } from '@angular/common';
 import localePt from '@angular/common/locales/pt';
 
 import { App } from './app';
-import { AppRoutingModule } from './app-routing-module';
+import { AppRoutingModule } from './app.routes';
 import { BarraNavegacao } from './components/barra-navegacao/barra-navegacao';
 import { Footer } from './components/footer/footer';
 import { Header } from './components/header/header';

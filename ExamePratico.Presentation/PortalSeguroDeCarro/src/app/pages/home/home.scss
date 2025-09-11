@@ -63,3 +63,10 @@
     }
   }
 }
+
+button:disabled {
+  opacity: .65;
+  background-color: grey;
+  color: #111;
+  cursor: not-allowed;
+}

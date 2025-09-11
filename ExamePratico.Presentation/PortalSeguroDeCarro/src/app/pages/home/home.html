@@ -1,7 +1,14 @@
 <section class="home">
   <div class="home__container-botao">
-    <h1 class="home__titulo"><span class="fa-solid fa-chart-gantt"></span> Médias por Marcas</h1>
-    <button type="button" class="home__link" (click)="baixarRelatorioJson()">
+    <h1 class="home__titulo">
+      <span class="fa-solid fa-chart-gantt"></span> Médias por Marcas
+    </h1>
+    <button
+      type="button"
+      class="home__link"
+      (click)="baixarRelatorioJson()"
+      [disabled]="lista.length === 0"
+    >
       Extrair relatório
     </button>
   </div>
